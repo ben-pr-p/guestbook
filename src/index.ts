@@ -159,7 +159,7 @@ const renderLogAsHtml = async (env: Env) => {
   const markdown = visits
     .map(
       (visit) =>
-        `*${visit.author}* wrote ${humanizeDuration(
+        `**${visit.author}** wrote ${humanizeDuration(
           Date.now() - visit.visited_at,
           { units: ["d", "h", "m", "s"], round: true }
         )} ago:\n ${visit.message
