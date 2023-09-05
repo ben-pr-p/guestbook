@@ -6,8 +6,9 @@ of a guestbook for my personal site at https://bprp.xyz.
 This is designed to run on Cloudflare Workers, and stores data in a Cloudflare D1
 SQLite database.
 
-The big challenge was getting this dynamic content to layer on top of (Obsidian Publish)[https://obsidian.md/publish]. The solution I found was throwing a div with `#guestbook` on any page I wanted
+The big challenge was getting this dynamic content to layer on top of [Obsidian Publish](https://obsidian.md/publish). The solution I found was throwing a div with `#guestbook` on any page I wanted
 the guestbook to appear in, and then throwing the following into my `publish.js`:
+
 ```javasacript
 const handler = () => {
   if (document.querySelector('#guestbook')) {
